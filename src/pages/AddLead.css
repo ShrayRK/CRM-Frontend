@@ -1,0 +1,110 @@
+.add-lead-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.add-lead-container {
+  min-height: calc(100vh - 48px);
+  border: 4px dashed white;
+  border-radius: 20px;
+
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+
+.add-lead-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  font-size: 22px;
+  font-weight: 600;
+  border-bottom: 4px dashed white;
+}
+
+.add-lead-sidebar {
+  grid-area: sidebar;
+  padding: 24px;
+  border-right: 4px dashed white;
+}
+
+.back-link {
+  display: inline-block;
+  padding: 12px 16px;
+  border: 2px dashed white;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+.back-link:hover {
+  background: white;
+  color: black;
+}
+
+.add-lead-main {
+  grid-area: main;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-lead-form {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 18px;
+  border: 2px dashed white;
+  background: #050505;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px dashed white;
+  background: black;
+  color: white;
+}
+
+.submit-btn {
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px dashed white;
+  background: #0a0a0a;
+  color: white;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .add-lead-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .add-lead-sidebar {
+    display: none;
+  }
+}

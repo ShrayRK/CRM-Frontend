@@ -1,0 +1,124 @@
+.edit-lead-page {
+  min-height: 100vh;
+  padding: 24px;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.edit-lead-container {
+  min-height: calc(100vh - 48px);
+  border: 4px dashed white;
+  border-radius: 20px;
+
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+
+.edit-lead-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  font-size: 22px;
+  font-weight: 600;
+  border-bottom: 4px dashed white;
+}
+
+.edit-lead-sidebar {
+  grid-area: sidebar;
+  padding: 24px;
+  border-right: 4px dashed white;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.edit-sidebar-link {
+  padding: 12px 16px;
+  border: 2px dashed white;
+  border-radius: 12px;
+  background-color: #0a0a0a;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+}
+
+.edit-sidebar-link:hover {
+  background-color: white;
+  color: black;
+}
+
+.edit-lead-main {
+  grid-area: main;
+  padding: 32px;
+  max-width: 600px;
+}
+
+.edit-lead-box {
+  padding: 24px;
+  border-radius: 18px;
+  border: 2px dashed white;
+  background-color: #050505;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edit-lead-box h3 {
+  font-size: 18px;
+}
+
+.edit-lead-box label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.edit-lead-box input,
+.edit-lead-box select {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0b0b0b;
+  color: white;
+}
+
+.edit-action-btn {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px dashed white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-action-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .edit-lead-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .edit-lead-sidebar {
+    display: none;
+  }
+
+  .edit-lead-main {
+    padding: 20px;
+  }
+}
